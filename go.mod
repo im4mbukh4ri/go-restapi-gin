@@ -1,4 +1,4 @@
-module ecommerce
+module github.com/im4mbukh4ri/go-restapi-gin
 
 go 1.19
 

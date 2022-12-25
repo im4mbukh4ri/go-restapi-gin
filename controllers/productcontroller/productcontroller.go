@@ -1,8 +1,10 @@
-package controllers
+package productcontroller
 
 import (
-	"../../models"
+	"net/http"
+
 	"github.com/gin-gonic/gin"
+	"github.com/im4mbukh4ri/go-restapi-gin/models"
 )
 
 func Index(c *gin.Context) {

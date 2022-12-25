@@ -1,8 +1,8 @@
 package main
 
 import (
-	"ecommerce/controllers"
-	"ecommerce/models"
+	"github.com/im4mbukh4ri/go-restapi-gin/controllers/productcontroller"
+	"github.com/im4mbukh4ri/go-restapi-gin/models"
 
 	"github.com/gin-gonic/gin"
 )
@@ -12,11 +12,11 @@ func main() {
 
 	models.ConnectDatabase()
 
-	route.GET("/api/products", controllers.Index)
-	route.GET("/api/product/:id", controllers.Show)
-	route.POST("/api/product", controllers.Store)
-	route.PUT("/api/product/:id", controllers.Update)
-	route.DELETE("/api/product", controllers.Delete)
+	route.GET("/api/products", productcontroller.Index)
+	route.GET("/api/product/:id", productcontroller.Show)
+	route.POST("/api/product", productcontroller.Store)
+	route.PUT("/api/product/:id", productcontroller.Update)
+	route.DELETE("/api/product", productcontroller.Delete)
 
 	route.Run()
 }
